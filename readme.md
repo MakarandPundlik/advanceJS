@@ -16,3 +16,9 @@ Execution ContextEverything in javascript happens in execution context, executio
 3. This process will continue till an another/same function is called within the function
 
 <img src="functionexecution.png" height="300"/>
+
+4. n over here is know as arguement and num is known as parameters, these 2 terminologies are different often used as alternatives
+5. once function execution is finished, the control will return back to the calling line and
+   execution context will be deleted
+6. all execution contexts are placed on CallStack , local execution contexts will be poped out of it as needed but, global context will be popped out at the end
+7. Fancy name for CallStack - Control stack, runtime stack, machine stack
