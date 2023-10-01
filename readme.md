@@ -1,24 +1,12 @@
-## Complete Javascript
+#### Async Await
 
-Execution ContextEverything in javascript happens in execution context, execution context can be imagined as a big box having 2 component:
+#### Time, Tide and Javascript does not wait for anyone.
 
-1. Memory component - Variable Environment
-2. Code - Thread of execution
-
-### Single Threaded and Synchronous i.e. one command at a time
-
-<br>
-
-### What happens when we run a Javascript program ?
-
-1. Execution context is created, memory is allocated to variables and functions, where function contains all the code and variables are initialized by a special keyword called “undefined“
-2. When function is called/invoked again a new execution context is created and memory is allocated save as above
-3. This process will continue till an another/same function is called within the function
-
-<img src="functionexecution.png" height="300"/>
-
-4. n over here is know as arguement and num is known as parameters, these 2 terminologies are different often used as alternatives
-5. once function execution is finished, the control will return back to the calling line and
-   execution context will be deleted
-6. all execution contexts are placed on CallStack , local execution contexts will be poped out of it as needed but, global context will be popped out at the end
-7. Fancy name for CallStack - Control stack, runtime stack, machine stack
+1. Async function always returns a promise whether it is typescript or a javascript
+2. If promise is not written explicitly then function automatically wraps a return value into a promise.
+3. If promise is returned explicitly then it doesnt get wrapped into another promise
+4. Async Await combo is used to handle promises
+5. keyword await is to be used in front of a promise only
+6. Await can only be used inside async function
+7. Major difference between .then and await keyword is await waits for the promise to get resolved, on the other hand JS engine pushes .then onto the callback queue and execute lines which are not a part of .then block.
+8. e.g., a promise1 takes 10 seconds to resolve, promise2 takes 5. Now these promises are been called into a same function total execution time comes around 10 seconds implying nodeJs internally runs promises onto a thread(actually a queue, but lets call it a thread for abstraction)
