@@ -1,24 +1,9 @@
-## Complete Javascript
+### Function and expressions and First Class functions 
 
-Execution ContextEverything in javascript happens in execution context, execution context can be imagined as a big box having 2 component:
-
-1. Memory component - Variable Environment
-2. Code - Thread of execution
-
-### Single Threaded and Synchronous i.e. one command at a time
-
-<br>
-
-### What happens when we run a Javascript program ?
-
-1. Execution context is created, memory is allocated to variables and functions, where function contains all the code and variables are initialized by a special keyword called “undefined“
-2. When function is called/invoked again a new execution context is created and memory is allocated save as above
-3. This process will continue till an another/same function is called within the function
-
-<img src="functionexecution.png" height="300"/>
-
-4. n over here is know as arguement and num is known as parameters, these 2 terminologies are different often used as alternatives
-5. once function execution is finished, the control will return back to the calling line and
-   execution context will be deleted
-6. all execution contexts are placed on CallStack , local execution contexts will be poped out of it as needed but, global context will be popped out at the end
-7. Fancy name for CallStack - Control stack, runtime stack, machine stack
+1. function expression is when an anonymous function is assigned to a variable 
+2. function declaration AKA function statement is when function is just declared using keyword function
+3. the key difference between function statement and function expression is hoisting, function declared with function statament will be called even if call is written the actual definition. On the other hand, function expression will throw error if function is called before definition 
+4. anonymous function is just a part of function expression where a varibale is assigned with a function that has no name (special case of function statement)
+5. Values passed while calling the function is known as arguements and when these values are accessed within the function these are called as parameters. Parameters have local scope with that function except for the object and data structures.
+6. ability of a function to be passed to another function as an argument or ability of a function to return a function is known as first class functions.
+Pro tip:- callbacks are first class functions 
